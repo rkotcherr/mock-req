@@ -35,10 +35,6 @@ function MockIncomingMessage(options) {
 			var val = options.headers[key];
 
 			if(val !== undefined) {
-				if (typeof val !== 'string') {
-					val += '';
-				}
-
 				self.headers[key.toLowerCase()] = val;
 				self.rawHeaders.push(key);
 				self.rawHeaders.push(val);
